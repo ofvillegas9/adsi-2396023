@@ -29,6 +29,7 @@ Lorem ipsum **dolor** sit ***amet.***
 `<input class:"form-control" type:"text" placeholder:"Username">`
 
 ---
+# (Image)
 [go to google](Http://www.google.com)
 ![Sant seiya](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuG2G54mJYdnXCuox_Vnl8DuMce_aoZjVU0w&usqp=CAU)
 ---
