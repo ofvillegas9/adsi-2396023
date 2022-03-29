@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        /* Specificity: 0,0,1 = 1 */
+        svg{
+            display: block;
+            margin: 10px auto;
+            width: 18rem;
+        }
+        /* Specificity: 0,1,1 = 11 */
+        svg.icon {
+            color: yellow;
+        }
+        /* Specificity: 0,1,2 = 12 */ /* primer 0 no hay id, el 1 es de una clase, y el 2 la heredada */
+        section svg.icon{
+            color:slateblue;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> 🏡 </a> Specificity</h1>
+        </header>
+        <section>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+
+        </section>
+    </main>
+    
+</body>
+</html>
