@@ -6,122 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Responsive</title>
     <style>
-        header {
-            border: 2px solid #666;
-            background-image: url(images/Logo.png);
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+		* {
+			transition: all 0.5s ease;
+		}
+		body {
+            background: url(images/Caballeros\ fondo.jpg) no-repeat;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif
+        }
+        main {
+			margin: 0px auto;
+			width: 1280px;
+        }
+        header div.logo {
+            background: url(images/LogoCZ.png)no-repeat center;
             background-size: contain;
-            height: 280px;
-            width: 500px;
-            margin: 0 auto;
-            
+            height: 300px;
         }
-
-        section div.figure1{
-            margin-top: 15px;
-            border: 2px solid #666;
-            background-image: url(images/Dragon\ ball.png);
-            background-size: cover;
+        section.boxes {
+            margin-top: 120px;
+        }
+        section.boxes div {
+            border: 2px solid #df3e16;
             display: inline-block;
-            height: 240px;
-            width: 240px;
+            height: 260px;
+            width: 260px;
+            position: relative;
+            margin-right: 30px;
         }
-
-        section div.figure2{
-            margin-top: 15px;
-            border: 2px solid #666;
-            background-image: url(images/ball\ z.png);
+        section.boxes div.box1 {
+            background: url(images/season1.jpg)no-repeat center;
             background-size: cover;
-            display: inline-block;
-            height: 240px;
-            width: 240px;
         }
-
-        section div.figure3{
-            margin-top: 15px;
-            border: 2px solid #666;
-            background-image: url(images/dragon\ kai.jpg);
+        section.boxes div.box2 {
+            background: url(images/season2.jpg.crdownload)no-repeat center;
             background-size: cover;
-            display: inline-block;
-            height: 240px;
-            width: 240px;
         }
-
-        section div.figure4{
-            margin-top: 15px;
-            border: 2px solid #666;
-            background-image: url(images/Dragon-Ball-Z-PNG-SUPER.png);
+        section.boxes div.box3 {
+            background: url(images/season3.jpg)no-repeat center;
             background-size: cover;
-            display: inline-block;
-            height: 240px;
-            width: 240px;
         }
-
-        .text {
-            border: 2px solid #666;
-            color: #fff;
-            text-align: center;
-            font-family: sans-serif;
-            background-color: #00000080;
-            height: 40px;
-            margin-top: 82%;
-        }
-
-
-        .contain1 {
-            border: 2px solid #666;
-        }
-
-        .principal1{
-            border: 2px solid #666;
-            background-image: url(images/rengoku.jpg);
+        section.boxes div.box4 {
+            background: url(images/season4.webp)no-repeat center;
             background-size: cover;
-            display: flex;
-            height: 240px;
-            width: 240px;
+        }
+        section.boxes div p {
+            background-color: rgb(0, 255, 255, .6);
+            color: #000000;
+            font-weight: bold;
+            bottom: 0px;
+            font-size: 1.1rem;
+            height: 20px;
+            line-height: 105%;
+			margin: 0px;
+			padding: 20px;
+			position: absolute;
+			text-align: center;
+            width: 220px;
+			transition: all 0.5s;
+        }
+        section.boxes div:hover  {
+            cursor: pointer;
+        }
+        section.boxes div:hover p {
+           height: 40px;
+        }
+        section.boxes div:first-child {
+			margin-left: 28px;
+		}
+		section.boxes div:last-child {
+			margin-right: 0px;
         }
 
-        .principal2{
-            border: 2px solid #666;
-            background-image: url(images/uzui.png);
-            background-size: cover;
-            display: flex;
-            height: 240px;
-            width: 240px;
+        footer {
+            margin-top: 60px;
         }
+        footer article {
+			border: 2px dashed rgba(0,0,0,.2);
+			height: 280px;
+			position: relative;
+			margin: 50px 28px;
+		}
+
+    
     </style>
 </head>
 <body>
-
-    <header></header>
-    <section>
-        <div class="figure1">
-            <div class="text">DRAGON BALL</div>
-        </div>
-        <div class="figure2">
-            <div class="text">DRAGON BALL Z</div>
-        </div>
-        <div class="figure3">
-            <div class="text">DRAGON BALL KAI</div>
-        </div>
-        <div class="figure4">
-            <div class="text">DRAGON BALL SUPER</div>
-        </div>
-    </section>
-
-    <section>
-        <div class="contain1">
-            <div class="principal1"></div>
-                <h3>DRAGON BALL</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque corrupti ex, repellat, eius autem ipsam nostrum aperiam inventore aut dolorem delectus quae sit explicabo? Labore, debitis facilis? Veritatis, id molestias. </p>
-        </div>
-    </section>
-    <section>
-        <div class="contain2">
-            <div class="principal2"></div>
-                <h3>DRAGON BALL Z</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque corrupti ex, repellat, eius autem ipsam nostrum aperiam inventore aut dolorem delectus quae sit explicabo? Labore, debitis facilis? Veritatis, id molestias. </p>
-        </div>
-    </section>
-    
+    <main>
+        <header>
+            <div class="logo"></div>
+        </header>
+        <section class="boxes">
+            <div class="box1">
+                <p>Las 12 Casas <small><br>(season 1)</small></p>
+            </div>
+            <div class="box2">
+                <p>Saga de Asgard <small><br>(Season 2)</small> </p>
+            </div>
+            <div class="box3">
+                <p>Saga de Poseidon <small><br> (Season 3)</small> </p>
+            </div>
+            <div class="box4">
+                <p>Saga de Hades <small><br>(Season 4)</small> </p>
+            </div>
+        </section>
+        <footer>
+            <article class="art1">
+                <figure></figure>
+                <div class="content">
+                    <h2> Caballeros Dorados </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus veniam repellendus nobis, rem fugit eligendi ab iusto quisquam commodi aut sequi placeat nam. Necessitatibus, aut ab nemo, illum sed, soluta cum enim aliquid repellat ad magni explicabo iste odio.</p>
+                </div>
+            </article>
+            <article class="art2">
+                <figure></figure>
+                <div class="art2">
+                    <h2> Dioses Guerreros de Asgard</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum neque optio magnam voluptas ab nobis incidunt blanditiis, ad a sunt beatae minima sequi dolores aliquam, adipisci odit esse explicabo! Quaerat dolor ullam omnis sed maiores id inventore molestias ad suscipit!</p>
+                </div>
+            </article>
+        </footer>
+    </main>
 </body>
 </html>
