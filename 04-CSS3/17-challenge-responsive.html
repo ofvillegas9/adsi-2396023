@@ -88,8 +88,96 @@
 			position: relative;
 			margin: 50px 28px;
 		}
-
-    
+        footer article figure.art1 {
+			background: url(images/Caballeros\ dorados.png) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px;
+			width: 280px;
+		}
+        footer article figure.art2 {
+			background: url(images/caballeros\ asgard.jpg) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px;
+			width: 280px;
+		}
+		footer article.art1 figure {
+			background-position: right center;
+		}
+		footer article figure,
+		footer article div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		footer article div {
+			margin-left: 28px;
+			width: 600px;
+		}
+		footer article div h2 {
+			color: rgba(0,0,0);
+			font-size: 2rem;
+			margin: 20px 0px;
+		}
+		footer article div p {
+			color: rgba(0,0,0);
+			line-height: 1.4em;
+			text-align: justify;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 1290px) {
+			main {
+				width: 680px;
+			}
+			header div.logo {
+				background-size: 45%;
+			}
+			section.boxes div {
+				margin: 28px;
+			}
+			footer article div {
+				width: 280px;
+			}
+			footer article div h2 {
+				font-size: 1.4rem;
+			}
+			footer article div p {
+				overflow-y: scroll;
+				height: 180px;
+			}
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 690px) {
+			main {
+				width: 480px;
+			}
+			section.boxes div {
+				display: block;
+				margin: 28px auto !important;
+                width: 90%;
+                height: 340px;
+			}
+            section.boxes div p {
+                height: 20px;
+                width: 392px;
+            }
+			footer article {
+				height: 560px;
+				margin: 40px auto;
+				width: 90%;
+			}
+            footer article figure {
+                background-size: 180%;
+            }
+			footer article figure,
+			footer article div {
+				display: block;
+                width: 100%;
+			}
+			footer article div {
+				margin-left: 0px;
+			}
+		}
     </style>
 </head>
 <body>
@@ -113,14 +201,14 @@
         </section>
         <footer>
             <article class="art1">
-                <figure></figure>
+                <figure class="art1"></figure>
                 <div class="content">
                     <h2> Caballeros Dorados </h2>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus veniam repellendus nobis, rem fugit eligendi ab iusto quisquam commodi aut sequi placeat nam. Necessitatibus, aut ab nemo, illum sed, soluta cum enim aliquid repellat ad magni explicabo iste odio.</p>
                 </div>
             </article>
             <article class="art2">
-                <figure></figure>
+                <figure class="art2"></figure>
                 <div class="art2">
                     <h2> Dioses Guerreros de Asgard</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum neque optio magnam voluptas ab nobis incidunt blanditiis, ad a sunt beatae minima sequi dolores aliquam, adipisci odit esse explicabo! Quaerat dolor ullam omnis sed maiores id inventore molestias ad suscipit!</p>
