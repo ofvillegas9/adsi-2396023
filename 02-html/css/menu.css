@@ -14,7 +14,7 @@ main {
 
 header h1 {
     background-color: #ffffff66;
-    border-bottom: 4px solid #279;
+    border-bottom: 4px solid rgb(42, 156, 201);
     color: #279;
     padding: 2rem;
     font-weight: 500;
