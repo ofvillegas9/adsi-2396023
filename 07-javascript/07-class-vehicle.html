@@ -7,8 +7,90 @@
     <title>Class Vehicle</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
+        /* Dark Mode */
+        main.dark {
+            background: url(images/vehicle/bg-dark.svg) no-repeat center;
+        }
+        main.dark section button.btn_mode {
+            background: url(images/vehicle/btn-light.svg) no-repeat center;
+        }
+        main.dark header h1 a:is(:link,:visited:focus),
+        main.dark header h1,
+        main.dark h2,
+        main.dark div.attributes {
+            color: #FFAD4D;
+        }
+        main.dark div.attributes div.brand {
+            background: url(images/vehicle/brand-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.refer {
+            background: url(images/vehicle/reference-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.model {
+            background: url(images/vehicle/model-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.color {
+            background: url(images/vehicle/color-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape {
+            background-color: #0005;
+        }
+        main.dark figure.landscape button.prev {
+            background: url(images/vehicle/btn-prev-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.next {
+            background: url(images/vehicle/btn-next-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on {
+            background: url(images/vehicle/btn-on-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw {
+            background: url(images/vehicle/btn-for-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop {
+            background: url(images/vehicle/btn-stop-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw {
+            background: url(images/vehicle/btn-rev-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.off {
+            background: url(images/vehicle/btn-off-dark.svg) no-repeat center;
+        }
+        
+        main.dark div.methods button.on.active {
+            background: url(images/vehicle/btn-on1.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw.active {
+            background: url(images/vehicle/btn-for1.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop.active {
+            background: url(images/vehicle/btn-stop1.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw.active {
+            background: url(images/vehicle/btn-rev1.svg) no-repeat center;
+        }
+        main.dark div.methods button.off.active {
+            background: url(images/vehicle/btn-off1.svg) no-repeat center;
+        }
+
+        main.dark figure.parallax div.layer1 {
+            background: url(images/vehicle/layer1-dark.svg) repeat-x;
+            z-index: 1;
+        }
+        main.dark figure.parallax div.layer2 {
+            background: url(images/vehicle/layer2-dark.svg) repeat-x;
+            z-index: 2;
+        }
+        main.dark figure.parallax div.layer3 {
+            background: url(images/vehicle/layer3-dark.svg) repeat-x;
+            z-index: 1;
+        }
+
+         /* Light Mode */
+
         main {
             background: url(images/vehicles/bg.svg);
+            transition: all 0.4s ease-in;
             height: 680px;
             width: 26rem;
         }
