@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty API Rest</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Roboto:ital,wght@1,100&display=swap');
+        body {
+            background-color: #333;
+            color: #ffffff;
+            font-family: Inter Tight;
+        }
+        ul.characters {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            list-style: none;
+            margin: 1rem;
+            padding: 0;
+        }   
+
+        @media screen and (max-width:1024px) {
+            ul.characters{
+                grid-template-columns: repeat(1,1fr);
+            }
+            
+        }
+
+        ul.characters li {
+            background: #3f5efb;
+            background: radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+            border-radius: 15px;
+            display: grid;
+        }
+
+        ul.characters li img {
+            margin: 0 auto;
+            width: 50%;
+            border-radius: 15px;
+        }
+
+        ul.characters li h2, h4 {
+            text-align: center;
+            content: center;
+        }
+
+        ul.characters li h4 {
+            margin: 4px 4px 8px 8px;
+        }
+
+
+        ul.characters li button {
+            background-color: #fff000;
+            border-radius: 15px;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 15px;
+            text-align: center;
+            transition: 200ms;
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        ul.characters li button:not(:disabled):hover,
+        button:not(:disabled):focus {
+            outline: 0;
+            background: #f4e603;
+            box-shadow: 0 0 0 2px #00000033, 0 3px 8px 0 #00000026;
+        }
+
+        ul.characters li div {
+            animation: opacityChange 2.2s infinite alternate;
+        }
+
+        @keyframes opacityChange {
+            50% {
+                opacity:1;
+            }
+            100% {
+                opacity: .5;
+            }
+        }
+       
+
+        
+    </style>
+</head>
+<body>
+    <ul class="characters"></ul>
+    
+    <script>
+        const characters = document.querySelector('.characters')
+        
+        async function getCharacters() {
+            for (let i = 1; i <= 40; i++) {
+                let resp  = await fetch('https://rickandmortyapi.com/api/character/' + i)
+                let char = await resp.json()
+                //console.log(char) 
+                characters.innerHTML += `<li> <h2>${char.id}: ${char.name}</h2>
+                    <img src="${char.image}">
+                    <div>
+                        <h4>Gender: ${char.gender}</h4>
+                        <h4>Status: ${char.status}</h4>
+                        <h4>Species: ${char.species}</h4>
+                    </div>
+                    <button data-id='${char.id}' class='btnShow'> Show more... </button>
+                    </li>`
+                    //characters.textContent = JSON.stringify(chars)
+                   if (i == 40){
+                    addClicksEvents ()
+                   } 
+                }   
+            }
+            function addClicksEvents(){
+                const btnShows = document.querySelectorAll('.btnShow')
+                btnShows.forEach(element => {
+                    element.addEventListener('click', (e) => {
+                        e.preventDefault()
+                        alert(element.dataset.id)
+                    })
+                })
+            }
+        getCharacters()
+    </script>
+</body>
+</html>
